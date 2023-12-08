@@ -2,7 +2,7 @@
 
 A card simple card component that expands smoothly.
 
-Live site URL: []()
+Live site URL: [https://quiel-progress-steps.netlify.app/](https://quiel-progress-steps.netlify.app/)
 
 ## Table of contents
 
