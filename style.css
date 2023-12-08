@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--line-border-fill: #3498db;
+	--line-border-empty: #e0e0e0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f6f7fb;
+	font-size: 1.4rem;
+}
+
+/* Container */
+.container {
+	text-align: center;
+}
+
+/* Progress container */
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 3rem;
+	max-width: 100%;
+	width: 35rem;
+}
+
+.progress-container::before {
+	content: "";
+	background-color: var(--line-border-empty);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 0.4rem;
+	width: 100%;
+	z-index: -1;
+}
+
+/* Progress */
+.progress {
+	background-color: var(--line-border-fill);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 0.4rem;
+	width: 0%;
+	z-index: -1;
+	transition: 0.4s ease;
+}
+
+/* Circle */
+.circle {
+	background-color: #fff;
+	color: #999;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0.3rem solid var(--line-border-empty);
+	transition: 0.4s ease;
+}
+
+/* Active state */
+.circle.active {
+	border-color: var(--line-border-fill);
+}
+
+/* Buttons */
+.btn {
+	cursor: pointer;
+	background-color: var(--line-border-fill);
+	color: #fff;
+	border: none;
+	border-radius: 0.6rem;
+	font-family: inherit;
+	padding: 0.8rem 3rem;
+	margin: 0.5rem;
+	font-size: inherit;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:disabled {
+	background-color: var(--line-border-empty);
+	cursor: not-allowed;
+}
