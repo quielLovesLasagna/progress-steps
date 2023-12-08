@@ -11,6 +11,7 @@ let currentActive = 1;
 
 // Function/s
 function update() {
+	// Adding active class to button
 	circles.forEach((circle, index) => {
 		if (index < currentActive) {
 			circle.classList.add("active");
@@ -19,11 +20,12 @@ function update() {
 		}
 	});
 
+	// Changing progress color
 	const actives = document.querySelectorAll(".active");
-
 	progress.style.width =
 		((actives.length - 1) / (circles.length - 1)) * 100 + "%";
 
+	// Changing disabled state for buttons
 	if (currentActive === 1) {
 		prevBtn.disabled = true;
 	} else if (currentActive === circles.length) {
